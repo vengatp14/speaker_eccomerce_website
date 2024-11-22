@@ -1,0 +1,5 @@
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    top: 90px;
+    left: 0px;
+}
