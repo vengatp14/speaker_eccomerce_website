@@ -1,0 +1,40 @@
+.container {
+  margin-top: 20px;
+}
+
+.poo {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.text-center {
+  margin-bottom: 30px;
+}
+
+.text-center img {
+  width: 130px; /* Fixed width */
+  height: 130px; /* Fixed height */
+  object-fit: cover; /* Ensures the image scales properly */
+  margin-bottom: 15px; /* Adds space between the image and the heading */
+}
+.card{
+  box-shadow: 10px 10px 5px 0px rgba(206,156,156,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(206,156,156,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(206,156,156,0.75);
+}
+.text-center h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.text-center p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif  ;
+  color: #786454; 
+ 
+
+}

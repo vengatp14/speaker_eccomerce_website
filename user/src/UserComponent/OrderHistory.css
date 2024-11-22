@@ -1,0 +1,30 @@
+/* Custom background color, shadows, and animations */
+.bg-light-dark {
+  background-color: #2e2e2e;
+  color: #ffffff;
+}
+
+.order-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in effect for expandable content */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

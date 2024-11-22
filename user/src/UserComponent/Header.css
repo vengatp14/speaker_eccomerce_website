@@ -1,0 +1,127 @@
+/* Adjust the logo size */
+.logo-img {
+  width: 100%;
+  height: 80px;
+}
+
+/* Align icons properly */
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for the modal */
+.modal.fade.show {
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.modal-body button {
+  margin-bottom: 10px;
+}
+
+/* New CSS to make dropdown open on hover */
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  margin-top: 0;
+}
+
+/* Style for dropdown hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+/* Additional styling for the navbar */
+.nab {
+  display: flex;
+  justify-content: center; /* Ensures the center alignment */
+font-size: 18px;
+font-weight: 600;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.nav-item {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.css_costum .nav-link {
+    display: block;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: rgba(35, 12, 208, 0.81);
+    text-decoration: none;
+    background: 0 0;
+    border: 0;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+.dropdown-menu{
+  background-color: rgba(184, 216, 26, 0.251);
+  font-size: 18px;
+  font-weight: 600;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   box-shadow: 10px 10px 5px 0px rgba(206,156,156,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(206,156,156,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(206,156,156,0.75);
+}
+.nav-item.dropdown:hover{
+  background-color: rgba(216, 231, 203, 0.477);
+}
+
+
+/* Cart icon container */
+.nav-item.cart-icon {
+  position: relative;
+}
+
+/* Cart count badge */
+.cart-count-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  min-width: 20px;
+  height: 20px;
+  line-height: 16px;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: rgb(36, 4, 131);
+  border: 1px solid #d81313;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.cart-dropdown .list-group {
+  margin: 0;
+  padding: 0;
+}
+
+.cart-dropdown .list-group-item {
+  border: none;
+  padding: 5px 10px;
+}

@@ -1,0 +1,115 @@
+.custom-select-style {
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.custom-dropdown select optgroup {
+  font-weight: bold;
+}
+
+.custom-dropdown option {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-dropdown option::after {
+  content: '';
+  margin-left: auto;
+}
+
+.custom-dropdown {
+  max-width: 100%;
+}
+
+.custom-dropdown select {
+  width: 100%;
+}
+.guarantee-icon {
+  width: 80px; /* Adjust the size according to your design */
+}
+
+.card {
+  border-radius: 10px;
+}
+
+p {
+  font-size: 0.9rem;
+}
+/* SingleProductPage.css */
+
+.image-gallery {
+  position: relative;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem; /* Same as rounded-start */
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.thumbnail {
+  width: 10%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  justify-content: space-between;
+  padding: 0 0 1 0;
+}
+
+.thumbnail:hover {
+  border-color: #007bff; /* Change this to your primary color */
+}
+
+.thumbnail.selected {
+  border-color: #007bff; /* Change this to your primary color */
+}
+.rating {
+  cursor: pointer;
+}
+
+.star {
+  font-size: 24px; /* Adjust the size as needed */
+  color: lightgray; /* Default star color */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.star.filled {
+  color: gold; /* Color for filled stars */
+}
+
+.main-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.thumbnail-gallery img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.thumbnail-gallery img:hover {
+  transform: scale(1.1);
+  border: 2px solid #007bff;
+}
+
+.rating .star {
+  cursor: pointer;
+  color: #ddd;
+  transition: color 0.2s ease;
+}
+
+.rating .star.filled {
+  color: #ffcc00;
+}

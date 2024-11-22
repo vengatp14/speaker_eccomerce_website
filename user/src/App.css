@@ -1,0 +1,61 @@
+  try {
+        const verificationResponse = await axios.post(
+          `http://127.0.0.1:8000/api/v1/rzp_capture/${response.razorpay_payment_id}/${total}`,
+          {
+            razorpay_payment_id: response.razorpay_payment_id,
+            razorpay_order_id: response.razorpay_order_id,
+            razorpay_signature: response.razorpay_signature,
+            amount: total
+          },
+          {
+            headers: {
+              "Content-Type": "application/json"
+            }
+          }
+        );
+
+        if (verificationResponse.data.status === 'success') {
+          const orderData = {
+            customer_id: userData?.user?.data?.user_id,
+            address: {
+              street: formData.address,
+              city: formData.district,
+              state: formData.state,
+              country: 'India',
+              postal_code: formData.pin
+            },
+            items: cartItems.map(item => ({
+              product_id: item.id,
+              quantity: parseInt(item.quantity)
+            })),
+            payment_method: 'Razorpay',
+            total_price: total,
+            payment_id: response.razorpay_payment_id
+          };
+
+          const orderResponse = await axios.post(
+            'http://127.0.0.1:8000/api/orders/',
+            orderData,
+            {
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            }
+          );
+
+          if (orderResponse.status === 201) {
+            setShowSuccessAlert(true);
+            setShowOrderSuccessModal(true);
+            localStorage.removeItem('cart');
+          } else {
+            throw new Error('Failed to create order');
+          }
+        } else {
+          throw new Error('Payment verification failed');
+        }
+      } catch (error) {
+        console.error('Error processing payment:', error);
+        setErrorMessage(error.response?.data?.message || 'An error occurred while processing your payment. Please try again.');
+      } finally {
+        setIsLoading(false);
+      }
